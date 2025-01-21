@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://3jcn2j8yil67"]
+
+[ext_resource type="Texture2D" uid="uid://courymbgk5sbo" path="res://IMAGENES/uwu.jpg" id="1_muwfb"]
+[ext_resource type="Texture2D" uid="uid://btfxcmt27g0lp" path="res://IMAGENES/BUTON.png" id="2_1nwb7"]
+[ext_resource type="Texture2D" uid="uid://q7gp264yomnb" path="res://IMAGENES/Captura de pantalla 2024-10-23 184749.png" id="3_i1a7g"]
+[ext_resource type="Texture2D" uid="uid://iatsbjxvdiwi" path="res://IMAGENES/setin.png" id="4_7tvq4"]
+
+[node name="mENU PRINCIPAL" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -93.0
+offset_top = -148.0
+offset_right = 1646.0
+offset_bottom = 1137.0
+texture = ExtResource("1_muwfb")
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 679.0
+offset_top = 161.0
+offset_right = 948.0
+offset_bottom = 313.0
+scale = Vector2(1.1, 1)
+icon = ExtResource("2_1nwb7")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 672.0
+offset_top = 399.0
+offset_right = 794.0
+offset_bottom = 439.0
+scale = Vector2(2.5, 3.9)
+icon = ExtResource("3_i1a7g")
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 679.0
+offset_top = 644.0
+offset_right = 847.0
+offset_bottom = 696.0
+scale = Vector2(1.7, 2.9)
+icon = ExtResource("4_7tvq4")
