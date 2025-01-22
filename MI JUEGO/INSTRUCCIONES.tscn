@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://c58l170da4kry"]
+
+[ext_resource type="Texture2D" uid="uid://dijsrxloc774l" path="res://IMAGENES/ARCADE.2 (1).webp" id="1_hv1qt"]
+[ext_resource type="Texture2D" uid="uid://bxfb0i760mghm" path="res://IMAGENES/Captura de pantalla 2024-10-24 163532.png" id="2_h6ken"]
+
+[node name="Creditos" type="Node2D"]
+
+[node name="FONDO" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 1.0
+offset_right = 11.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.270588, 0.0313726, 0.0313726, 1)
+
+[node name="FONDO IMAGEN" type="TextureRect" parent="FONDO"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -657.0
+offset_top = -444.0
+offset_right = 789.0
+offset_bottom = 362.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hv1qt")
+metadata/_edit_lock_ = true
+
+[node name="VOLVER" type="Button" parent="FONDO"]
+offset_left = -184.0
+offset_top = -26.0
+offset_right = 233.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 70
+text = "VOLVER"
+
+[node name="IMAGEN EXIT" type="Sprite2D" parent="FONDO/VOLVER"]
+position = Vector2(219, 51)
+scale = Vector2(2.36707, 1.40854)
+texture = ExtResource("2_h6ken")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = -529.0
+offset_top = -261.0
+offset_right = 708.0
+offset_bottom = -167.0
+theme_override_colors/background_color = Color(0.811765, 1, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Este juego fue creado por Antonio Marín Drieguez "
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = -522.0
+offset_top = 166.0
+offset_right = 694.0
+offset_bottom = 256.0
+theme_override_colors/background_color = Color(0.427451, 0, 0.552941, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Alumno de Segundo de Bachillerato B de Ciencias"

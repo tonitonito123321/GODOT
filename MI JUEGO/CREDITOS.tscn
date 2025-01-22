@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg54b60isv54o"]
+
+[ext_resource type="Texture2D" uid="uid://c720cjvb0edc0" path="res://IMAGENES/ARCADE.1 (1).webp" id="1_17npf"]
+
+[node name="Creditos" type="Node2D"]
+
+[node name="FONDO" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 1.0
+offset_right = 11.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.270588, 0.0313726, 0.0313726, 1)
+
+[node name="FONDO IMAGEN" type="TextureRect" parent="FONDO"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -657.0
+offset_top = -444.0
+offset_right = 789.0
+offset_bottom = 362.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_17npf")
+metadata/_edit_lock_ = true
