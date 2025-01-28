@@ -27,6 +27,7 @@ scale = Vector2(1.94667, 1.98077)
 texture = ExtResource("2_ojuao")
 
 [node name="VOLVER" type="Button" parent="FONDO"]
+layout_mode = 0
 offset_left = -272.0
 offset_top = -51.0
 offset_right = 58.0
@@ -34,16 +35,16 @@ offset_bottom = 42.0
 theme_override_font_sizes/font_size = 39
 text = "VOLVER"
 
-[node name="EXIT IMAGEN" type="Sprite2D" parent="FONDO/VOLVER"]
+[node name="IMAGEN VOLVER" type="Sprite2D" parent="FONDO/VOLVER"]
 position = Vector2(160.75, 52.5)
 scale = Vector2(1.75366, 1.2561)
 texture = ExtResource("3_j3vhm")
 metadata/_edit_lock_ = true
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = -698.0
+[node name="NOMBRE" type="TextEdit" parent="."]
+offset_left = -661.0
 offset_top = -403.0
-offset_right = 538.0
+offset_right = 575.0
 offset_bottom = -309.0
 theme_override_colors/background_color = Color(0.811765, 1, 0, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
@@ -51,7 +52,7 @@ theme_override_font_sizes/font_size = 35
 text = "                 Este juego fue creado por Antonio Marín Drieguez "
 metadata/_edit_use_anchors_ = true
 
-[node name="TextEdit2" type="TextEdit" parent="."]
+[node name="IMAGENES" type="TextEdit" parent="."]
 offset_left = -670.0
 offset_top = 163.0
 offset_right = 546.0
@@ -62,13 +63,13 @@ theme_override_font_sizes/font_size = 43
 text = "       Alumno de Segundo de Bachillerato B de Ciencias"
 metadata/_edit_use_anchors_ = true
 
-[node name="TextEdit3" type="TextEdit" parent="."]
+[node name="BACH" type="TextEdit" parent="."]
 offset_left = -597.0
 offset_top = -273.0
 offset_right = 428.0
 offset_bottom = -183.0
-theme_override_colors/background_color = Color(0.427451, 0, 0.552941, 1)
-theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/background_color = Color(0.184314, 1, 0.160784, 1)
+theme_override_colors/font_color = Color(0, 0.211765, 0.972549, 1)
 theme_override_font_sizes/font_size = 50
 text = "Todas las imagenes usadas son de Google"
 metadata/_edit_use_anchors_ = true

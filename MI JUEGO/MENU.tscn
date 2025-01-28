@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://83uc0bg6drop"]
+[gd_scene load_steps=7 format=3 uid="uid://83uc0bg6drop"]
 
 [ext_resource type="Script" path="res://SCRIPTS/MENU.gd" id="1_bk34g"]
 [ext_resource type="Texture2D" uid="uid://dbjt7jqdhe1c4" path="res://IMAGENES/203545362-paisaje-mundial-de-juegos-de-arcade-con-árboles-y-arbustos-pixelados-fondo-de-juego-pixelado.jpg" id="1_i1aao"]
 [ext_resource type="Texture2D" uid="uid://do7u0cp6ewwv0" path="res://IMAGENES/Captura de pantalla 2024-10-23 184921.png" id="2_mwb20"]
 [ext_resource type="Texture2D" uid="uid://dpj3pkknccpe2" path="res://IMAGENES/setin.png" id="3_3hduy"]
+[ext_resource type="AudioStream" uid="uid://dut4453158gyp" path="res://SONIDOS/SONIDO BOTON 2.ogg" id="3_jxaif"]
 [ext_resource type="Texture2D" uid="uid://bxfb0i760mghm" path="res://IMAGENES/Captura de pantalla 2024-10-24 163532.png" id="5_yiqfu"]
 
 [node name="Menu" type="Control"]
@@ -61,11 +62,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 70
 text = "START"
 
+[node name="SonidoBoton2" type="AudioStreamPlayer" parent="BOTONES/Start"]
+stream = ExtResource("3_jxaif")
+
 [node name="IMAGEN START" type="Sprite2D" parent="BOTONES/Start"]
-position = Vector2(185.75, 52.75)
-scale = Vector2(1.27759, 0.771739)
+position = Vector2(184, 52.5)
+scale = Vector2(1.28966, 0.833333)
 texture = ExtResource("2_mwb20")
-metadata/_edit_lock_ = true
 
 [node name="Setting" type="Button" parent="BOTONES"]
 layout_mode = 2
@@ -89,6 +92,7 @@ scale = Vector2(1.83171, 1.37805)
 texture = ExtResource("5_yiqfu")
 metadata/_edit_lock_ = true
 
+[connection signal="mouse_entered" from="BOTONES" to="." method="_on_botones_mouse_entered"]
 [connection signal="pressed" from="BOTONES/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="BOTONES/Setting" to="." method="_on_setting_pressed"]
 [connection signal="pressed" from="BOTONES/EXIT" to="." method="_on_exit_pressed"]

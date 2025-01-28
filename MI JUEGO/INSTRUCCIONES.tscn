@@ -34,7 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_vx3e4")
 
-[node name="Download" type="Sprite2D" parent="."]
+[node name="IMAGEN TECLADO" type="Sprite2D" parent="."]
 position = Vector2(335, 229)
 scale = Vector2(1.88727, 2.18288)
 texture = ExtResource("3_hbxjj")
@@ -109,8 +109,8 @@ offset_right = 695.0
 offset_bottom = 565.0
 text = "VOLVER"
 
-[node name="CapturaDePantalla2024-10-24163532" type="Sprite2D" parent="."]
-position = Vector2(594.25, 525)
+[node name="IMAGEN VOLVER" type="Sprite2D" parent="VOLVER"]
+position = Vector2(106.25, 39)
 scale = Vector2(1.05122, 1)
 texture = ExtResource("2_h6ken")
 

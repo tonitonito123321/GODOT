@@ -55,24 +55,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 63
 
-[node name="VOLUMEN" type="Button" parent="BOTONES"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 0.94902)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.992157)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 70
-text = "VOLUMEN"
-
 [node name="CREDITOS" type="Button" parent="BOTONES"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 1, 1)
@@ -90,15 +72,14 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 70
 text = "VOLVER"
 
-[node name="IMAGEN EXIT" type="Sprite2D" parent="BOTONES/VOLVER"]
+[node name="IMAGEN VOLVER" type="Sprite2D" parent="BOTONES/VOLVER"]
 position = Vector2(279.25, 51.25)
 scale = Vector2(2.73415, 1.40854)
 texture = ExtResource("5_ob7h2")
 
-[connection signal="pressed" from="BOTONES/VOLUMEN" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="BOTONES/CREDITOS" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="BOTONES/CREDITOS" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="BOTONES/CREDITOS" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="BOTONES/INSTRUCCIONES" to="." method="_on_setting_pressed"]
 [connection signal="pressed" from="BOTONES/INSTRUCCIONES" to="." method="_on_instrucciones_pressed"]
-[connection signal="pressed" from="BOTONES/VOLVER" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="BOTONES/VOLVER" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="BOTONES/VOLVER" to="." method="_on_exit_pressed"]

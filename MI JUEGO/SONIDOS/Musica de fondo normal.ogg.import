@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dsu117wgmn1fu"
+path="res://.godot/imported/Musica de fondo normal.ogg-a7deb21f595afd1423c1a790a0814eaf.oggvorbisstr"
+
+[deps]
+
+source_file="res://SONIDOS/Musica de fondo normal.ogg"
+dest_files=["res://.godot/imported/Musica de fondo normal.ogg-a7deb21f595afd1423c1a790a0814eaf.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
