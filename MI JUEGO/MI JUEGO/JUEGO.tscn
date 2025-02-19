@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://d100vcbhipc7e"]
+
+[ext_resource type="Script" path="res://SCRIPTS/JUEGO.gd" id="1_1o25t"]
+[ext_resource type="Texture2D" uid="uid://dbjt7jqdhe1c4" path="res://IMAGENES/203545362-paisaje-mundial-de-juegos-de-arcade-con-árboles-y-arbustos-pixelados-fondo-de-juego-pixelado.jpg" id="2_5nrw0"]
+[ext_resource type="Texture2D" uid="uid://bxfb0i760mghm" path="res://IMAGENES/Captura de pantalla 2024-10-24 163532.png" id="3_876qa"]
+[ext_resource type="AudioStream" uid="uid://dut4453158gyp" path="res://SONIDOS/SONIDO BOTON 2.ogg" id="4_7nqkt"]
+[ext_resource type="AudioStream" uid="uid://b3u6ju1rnsef0" path="res://SONIDOS/SONIDO BOTON PURU.ogg" id="5_t8o0o"]
+[ext_resource type="PackedScene" uid="uid://y25jefvo56lo" path="res://pj_1.tscn" id="6_q1pfk"]
+
+[node name="JUEGO" type="Node2D"]
+script = ExtResource("1_1o25t")
+
+[node name="FONDO" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 586.714
+offset_top = 324.249
+offset_right = 586.714
+offset_bottom = 324.249
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.270588, 0.0313726, 0.0313726, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="FONDO JUEGO" type="Sprite2D" parent="FONDO"]
+position = Vector2(-9.71387, -0.748566)
+scale = Vector2(0.883077, 0.748558)
+texture = ExtResource("2_5nrw0")
+
+[node name="VOLVER" type="Button" parent="FONDO"]
+layout_mode = 0
+offset_left = 355.286
+offset_top = 237.751
+offset_right = 552.286
+offset_bottom = 314.751
+theme_override_font_sizes/font_size = 50
+text = "VOLVER"
+
+[node name="IMAGEN VOLVER" type="Sprite2D" parent="FONDO/VOLVER"]
+position = Vector2(96, 36)
+scale = Vector2(1, 1.02439)
+texture = ExtResource("3_876qa")
+
+[node name="SonidoBoton2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7nqkt")
+
+[node name="SonidoBotonPuru" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_t8o0o")
+
+[node name="PJ1" parent="." instance=ExtResource("6_q1pfk")]
+position = Vector2(510, 399)
+
+[connection signal="pressed" from="FONDO/VOLVER" to="." method="_on_volver_pressed"]

@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://c58l170da4kry"]
+
+[ext_resource type="Script" path="res://SCRIPTS/CREDITS.gd" id="1_dy0h1"]
+[ext_resource type="Texture2D" uid="uid://dijsrxloc774l" path="res://IMAGENES/ARCADE.2 (1).webp" id="2_ojuao"]
+[ext_resource type="Texture2D" uid="uid://bxfb0i760mghm" path="res://IMAGENES/Captura de pantalla 2024-10-24 163532.png" id="3_j3vhm"]
+[ext_resource type="AudioStream" uid="uid://b3u6ju1rnsef0" path="res://SONIDOS/SONIDO BOTON PURU.ogg" id="4_xj324"]
+
+[node name="Creditos" type="Node2D"]
+position = Vector2(656, 396)
+script = ExtResource("1_dy0h1")
+
+[node name="FONDO" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 1.0
+offset_right = 11.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.270588, 0.0313726, 0.0313726, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="FONDO IMAGEN" type="Sprite2D" parent="FONDO"]
+position = Vector2(-81, -58.75)
+scale = Vector2(1.94667, 1.98077)
+texture = ExtResource("2_ojuao")
+
+[node name="VOLVER" type="Button" parent="FONDO"]
+layout_mode = 0
+offset_left = -272.0
+offset_top = -51.0
+offset_right = 58.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 39
+text = "VOLVER"
+
+[node name="IMAGEN VOLVER" type="Sprite2D" parent="FONDO/VOLVER"]
+position = Vector2(160.75, 52.5)
+scale = Vector2(1.75366, 1.2561)
+texture = ExtResource("3_j3vhm")
+metadata/_edit_lock_ = true
+
+[node name="NOMBRE" type="TextEdit" parent="."]
+offset_left = -661.0
+offset_top = -403.0
+offset_right = 575.0
+offset_bottom = -309.0
+theme_override_colors/background_color = Color(0.811765, 1, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "                 Este juego fue creado por Antonio Marín Drieguez "
+metadata/_edit_use_anchors_ = true
+
+[node name="IMAGENES" type="TextEdit" parent="."]
+offset_left = -670.0
+offset_top = 163.0
+offset_right = 546.0
+offset_bottom = 253.0
+theme_override_colors/background_color = Color(0.427451, 0, 0.552941, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "       Alumno de Segundo de Bachillerato B de Ciencias"
+metadata/_edit_use_anchors_ = true
+
+[node name="BACH" type="TextEdit" parent="."]
+offset_left = -597.0
+offset_top = -273.0
+offset_right = 428.0
+offset_bottom = -183.0
+theme_override_colors/background_color = Color(0.184314, 1, 0.160784, 1)
+theme_override_colors/font_color = Color(0, 0.211765, 0.972549, 1)
+theme_override_font_sizes/font_size = 50
+text = "Todas las imagenes usadas son de Google"
+metadata/_edit_use_anchors_ = true
+
+[node name="SonidoBotonPuru" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_xj324")
+
+[connection signal="pressed" from="FONDO/VOLVER" to="." method="_on_volver_pressed"]

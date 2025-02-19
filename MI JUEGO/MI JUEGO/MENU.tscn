@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://83uc0bg6drop"]
+
+[ext_resource type="Script" path="res://SCRIPTS/MENU.gd" id="1_bk34g"]
+[ext_resource type="Texture2D" uid="uid://dbjt7jqdhe1c4" path="res://IMAGENES/203545362-paisaje-mundial-de-juegos-de-arcade-con-árboles-y-arbustos-pixelados-fondo-de-juego-pixelado.jpg" id="1_i1aao"]
+[ext_resource type="Texture2D" uid="uid://do7u0cp6ewwv0" path="res://IMAGENES/Captura de pantalla 2024-10-23 184921.png" id="2_mwb20"]
+[ext_resource type="Texture2D" uid="uid://dpj3pkknccpe2" path="res://IMAGENES/setin.png" id="3_3hduy"]
+[ext_resource type="AudioStream" uid="uid://dut4453158gyp" path="res://SONIDOS/SONIDO BOTON 2.ogg" id="3_jxaif"]
+[ext_resource type="Texture2D" uid="uid://bxfb0i760mghm" path="res://IMAGENES/Captura de pantalla 2024-10-24 163532.png" id="5_yiqfu"]
+[ext_resource type="AudioStream" uid="uid://b3u6ju1rnsef0" path="res://SONIDOS/SONIDO BOTON PURU.ogg" id="7_3coy3"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bk34g")
+
+[node name="FONDO" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 1.0
+offset_right = 11.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.270588, 0.0313726, 0.0313726, 1)
+
+[node name="FONDO IMAGEN" type="TextureRect" parent="FONDO"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -228.0
+offset_right = 178.0
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i1aao")
+
+[node name="BOTONES" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = -142.5
+offset_right = 185.0
+offset_bottom = 142.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 63
+
+[node name="Start" type="Button" parent="BOTONES"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "START"
+
+[node name="IMAGEN START" type="Sprite2D" parent="BOTONES/Start"]
+position = Vector2(184, 52.5)
+scale = Vector2(1.28966, 0.833333)
+texture = ExtResource("2_mwb20")
+
+[node name="Setting" type="Button" parent="BOTONES"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "SETTING"
+
+[node name="IMAGEN SETTING" type="Sprite2D" parent="BOTONES/Setting"]
+position = Vector2(184.5, 53)
+scale = Vector2(2.33125, 2.40909)
+texture = ExtResource("3_3hduy")
+metadata/_edit_lock_ = true
+
+[node name="EXIT" type="Button" parent="BOTONES"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "EXIT"
+
+[node name="IMAGEN EXIT" type="Sprite2D" parent="BOTONES/EXIT"]
+position = Vector2(186.75, 50)
+scale = Vector2(1.83171, 1.37805)
+texture = ExtResource("5_yiqfu")
+metadata/_edit_lock_ = true
+
+[node name="SonidoBotonPuru" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3coy3")
+pitch_scale = 0.67
+
+[node name="SonidoBoton2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jxaif")
+
+[connection signal="mouse_entered" from="BOTONES" to="." method="_on_botones_mouse_entered"]
+[connection signal="pressed" from="BOTONES/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="BOTONES/Setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="BOTONES/EXIT" to="." method="_on_exit_pressed"]
+[connection signal="finished" from="SonidoBotonPuru" to="." method="_on_sonido_boton_puru_finished"]

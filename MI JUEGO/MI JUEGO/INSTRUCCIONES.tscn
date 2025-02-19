@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg54b60isv54o"]
+
+[ext_resource type="Script" path="res://SCRIPTS/INSTRUCCIONES.gd" id="1_7pj32"]
+[ext_resource type="Texture2D" uid="uid://bxfb0i760mghm" path="res://IMAGENES/Captura de pantalla 2024-10-24 163532.png" id="2_h6ken"]
+[ext_resource type="Texture2D" uid="uid://c720cjvb0edc0" path="res://IMAGENES/ARCADE.1 (1).webp" id="2_vx3e4"]
+[ext_resource type="Texture2D" uid="uid://cw6raludsgca4" path="res://IMAGENES/download.jpg" id="3_hbxjj"]
+[ext_resource type="AudioStream" uid="uid://b3u6ju1rnsef0" path="res://SONIDOS/SONIDO BOTON PURU.ogg" id="5_jh60y"]
+
+[node name="instrucciones" type="Node2D"]
+script = ExtResource("1_7pj32")
+
+[node name="FONDO" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 1.0
+offset_right = 11.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.270588, 0.0313726, 0.0313726, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="FONDO IMAGEN" type="TextureRect" parent="FONDO"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -7.0
+offset_right = 1143.0
+offset_bottom = 646.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vx3e4")
+
+[node name="IMAGEN TECLADO" type="Sprite2D" parent="."]
+position = Vector2(335, 229)
+scale = Vector2(1.88727, 2.18288)
+texture = ExtResource("3_hbxjj")
+offset = Vector2(34.3219, -2.94231)
+
+[node name="LINEA ADELANTE" type="Line2D" parent="."]
+position = Vector2(79, 79)
+scale = Vector2(0.630947, 0.592224)
+points = PackedVector2Array(218, 201, 467.551, -6.7542, 393.06, 6.7542, 443.778, 65.8534, 467.551, -6.7542)
+default_color = Color(1, 0, 1, 1)
+metadata/_edit_lock_ = true
+
+[node name="ADELANTE" type="TextEdit" parent="LINEA ADELANTE"]
+offset_left = 477.061
+offset_top = -75.9847
+offset_right = 708.061
+offset_bottom = 10.0153
+theme_override_font_sizes/font_size = 50
+text = "Adelante"
+
+[node name="LINEA ATRAS" type="Line2D" parent="."]
+position = Vector2(409, 229)
+rotation = -3.92699
+scale = Vector2(0.630947, 0.592224)
+points = PackedVector2Array(218, 201, 467.551, -6.7542, 393.06, 6.7542, 443.778, 65.8534, 467.551, -6.7542)
+default_color = Color(1, 0, 1, 1)
+
+[node name="ATRAS" type="TextEdit" parent="LINEA ATRAS"]
+offset_left = 544.531
+offset_top = 28.0447
+offset_right = 714.531
+offset_bottom = 114.045
+rotation = -2.35619
+theme_override_font_sizes/font_size = 50
+text = "ATRAS"
+
+[node name="LINEA DERECHA" type="Line2D" parent="."]
+position = Vector2(245, 57)
+rotation = 0.785397
+scale = Vector2(0.630947, 0.592224)
+points = PackedVector2Array(218, 201, 467.551, -6.7542, 393.06, 6.7542, 443.778, 65.8534, 467.551, -6.7542)
+default_color = Color(1, 0, 1, 1)
+
+[node name="DERECHA" type="TextEdit" parent="."]
+offset_left = 481.0
+offset_top = 242.0
+offset_right = 682.0
+offset_bottom = 308.0
+theme_override_font_sizes/font_size = 40
+text = "DERECHA"
+
+[node name="LINEA IZQUIERDA" type="Line2D" parent="."]
+position = Vector2(43.5723, 287.794)
+rotation = -1.0472
+scale = Vector2(0.542519, 0.519026)
+points = PackedVector2Array(218, 201, 467.551, -6.7542, 393.06, 6.7542, 443.778, 65.8534, 467.551, -6.7542)
+default_color = Color(1, 0, 1, 1)
+
+[node name="IZQUIERDA" type="TextEdit" parent="LINEA IZQUIERDA"]
+offset_left = 474.892
+offset_top = -180.223
+offset_right = 751.892
+offset_bottom = -94.2227
+rotation = 1.0472
+theme_override_font_sizes/font_size = 50
+text = "IZQUIERDA"
+
+[node name="VOLVER" type="Button" parent="."]
+offset_left = 488.0
+offset_top = 486.0
+offset_right = 695.0
+offset_bottom = 565.0
+text = "VOLVER"
+
+[node name="IMAGEN VOLVER" type="Sprite2D" parent="VOLVER"]
+position = Vector2(106.25, 39)
+scale = Vector2(1.05122, 1)
+texture = ExtResource("2_h6ken")
+
+[node name="SonidoBotonPuru" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_jh60y")
+
+[connection signal="pressed" from="VOLVER" to="." method="_on_volver_pressed"]

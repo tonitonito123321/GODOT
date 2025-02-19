@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cng8fwywp41pf"]
+
+[ext_resource type="AudioStream" uid="uid://dsu117wgmn1fu" path="res://SONIDOS/Musica de fondo normal.ogg" id="1_74iff"]
+
+[node name="AUDIO DE FONDO" type="AudioStreamPlayer"]
+stream = ExtResource("1_74iff")
+volume_db = -26.234
+pitch_scale = 0.89
+autoplay = true

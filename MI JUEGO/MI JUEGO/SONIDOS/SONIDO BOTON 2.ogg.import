@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dut4453158gyp"
+path="res://.godot/imported/SONIDO BOTON 2.ogg-f74361fba9b39c64e11d67d3df7b2e7e.oggvorbisstr"
+
+[deps]
+
+source_file="res://SONIDOS/SONIDO BOTON 2.ogg"
+dest_files=["res://.godot/imported/SONIDO BOTON 2.ogg-f74361fba9b39c64e11d67d3df7b2e7e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
